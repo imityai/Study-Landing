@@ -1,0 +1,90 @@
+.jobs {
+	background-color: $light-bg;
+}
+
+.jobs__title {
+	padding: 0 0 7px 0;
+	margin: 0;
+
+	@media (max-width: $mobile-width) {
+		padding: 0 0 13px 0;
+	}
+}
+
+.jobs__list {
+	display: flex;
+	justify-content: space-between;
+	gap: 26px;
+	margin: 0 0 0 10px;
+	padding: 0;
+
+	list-style: none;
+	overflow-x: scroll;
+
+	@media (max-width: $tablet-width) {
+		width: 718px;
+    min-width: 100%;
+	}
+
+	@media (max-width: $mobile-width) {
+		width: 310px;
+    min-width: 100%;
+	}
+}
+
+.jobs__list-item {
+  flex-shrink: 0;
+
+	display: grid;
+	grid-template-rows: auto 1fr auto auto auto;
+	width: 310px;
+	padding: 26px 23px 25px 31px;
+
+	border: 1px solid $black;
+	border-radius: 8px;
+}
+
+.jobs__item-header-wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 23px 0;
+}
+
+.jobs__item-logo-image {
+	display: block;
+}
+
+.jobs__item-title {
+	margin: 0 0 14px 0;
+
+	font-size: 18px;
+	line-height: 1.2;
+	letter-spacing: 0.6px;
+}
+
+.jobs__item-data {
+	margin: 0 0 13px 0;
+
+	font-size: 13px;
+	line-height: 1.7;
+}
+
+.jobs__item-data-link {
+	color: black;
+}
+
+.jobs__item-employee-status {
+	margin: 0 0 20px 0;
+
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.jobs__item-button {
+	display: block;
+	width: 100%;
+	
+	text-align: center;
+
+	border: 1px solid black;
+}

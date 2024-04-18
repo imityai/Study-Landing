@@ -1,0 +1,18 @@
+.section-header-wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 137px 0 0 0;
+	margin: 0 0 50px 0;
+
+	@media (max-width: $tablet-width) {
+		padding: 100px 0 0 0;
+	}
+
+	@media (max-width: $mobile-width) {
+		flex-direction: column;
+		padding: 50px 0 0 0;
+		margin: 0 0 25px 0;
+
+		text-align: center;
+	}
+}

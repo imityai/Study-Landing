@@ -1,0 +1,131 @@
+.start {
+	margin: 0 0 100px 0;
+}
+
+.start__title {
+	margin: 0 0 66px 0;
+
+	text-align: center;
+}
+
+.start__wrapper {
+	display: flex;
+  justify-content: space-between;
+	gap: 30px;
+
+	@media (max-width: $mobile-width) {
+		flex-direction: column;
+	}
+}
+
+.start__wrapper-text {
+	@media (max-width: $mobile-width) {
+		order: 1;
+	}
+}
+
+.start__list {
+	padding: 0;
+	margin: 0;
+
+	list-style: none;
+
+	counter-reset: my-counter;
+}
+
+.start__list-item {
+	position: relative;
+
+	width: 513px;
+	padding: 45px 0 44px 99px;
+
+	font-size: 27px;
+	line-height: 1.5;
+	letter-spacing: 0.9px;
+
+	border-top: 1px solid $transparent;
+	border-bottom: 1px solid $border-gray;
+	border-left: 1px solid $transparent;
+
+	cursor: pointer;
+
+	&:last-child {
+		border-bottom: $transparent;
+	}
+
+	@media (max-width: $tablet-width) {
+		width: auto;
+		padding: 35px 0 34px 99px;
+
+		font-size: 22px;
+	}
+
+	&::after {
+		content: counter(my-counter);
+		counter-increment: my-counter;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 41px;
+
+		padding: 5px 13px 9px 12px;
+
+		font-family: $secondary-font;
+		font-size: 20px;
+		line-height: 1.4;
+		letter-spacing: 0.6px;
+		color: $black;
+
+		border: 1px solid $black;
+		border-radius: 8px;
+		box-shadow: 3px 3px 0px 0px $black;
+	}
+
+	&--hover {
+		border: 0;
+		border: 1px solid $black;
+		border-radius: 20px;
+		box-shadow: 6px 6px 0px 0px $black;
+		z-index: 0;
+
+		&::after {
+			background-color: $yellow;
+		}
+
+		// &::before {
+		// 	content: "";
+		// 	position: absolute;
+		// 	top: -2px;
+		// 	left: 0;
+		// 	right: 0;
+		// 	outline: 1px solid $white;
+		// 	z-index: -1;
+		// }
+	}
+}
+
+.start__wrapper-image {
+	align-self: center;
+	padding: 99px 41px 99px 81px;
+
+	border: 1px solid $black;
+	border-radius: 20px;
+	background: $start-bg;
+
+	@media (max-width: $tablet-width) {
+		width: 50%;
+		padding: 89px 31px 89px 31px;
+	}
+
+	@media (max-width: $mobile-width) {
+		width: 100%;
+	}
+}
+
+.start__image {
+	display: block;
+
+	@media (max-width: $mobile-width) {
+		margin: 0 auto;
+	}
+}

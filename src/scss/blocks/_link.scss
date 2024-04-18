@@ -1,0 +1,55 @@
+.link {
+	position: relative;
+
+	align-self: flex-end;
+	padding: 0 50px 0 0;
+
+	font-family: $secondary-font;
+	font-size: 18px;
+	line-height: 1.5;
+	color: $black;
+
+	@media (max-width: $mobile-width) {
+    align-self: center;
+		padding: 0 0 5px 0;
+		width: fit-content;
+
+		border-bottom: 1px solid $black;
+	}
+	
+	&:hover,
+	&:focus-visible {
+		opacity: 0.6;
+		outline: none;
+	}
+
+	&:active {
+		opacity: 0.3;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+
+		width: 32px;
+		height: 12px;
+
+		background-image: url("../../img/icons/arrow_right.svg");
+		background-repeat: no-repeat;
+		background-position-x: -8px;
+
+		transition: background-position-x 0.4s ease-in-out;
+
+		@media (max-width: $mobile-width) {
+			display: none;
+		}
+	}
+
+	&:hover::before,
+	&:focus-visible::before {
+		background-position-x: 0;
+	}
+}

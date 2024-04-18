@@ -1,0 +1,17 @@
+.heart__button {
+	padding: 7px;
+
+	background-color: $transparent;
+	border-radius: 50%;
+	border: 0;
+
+	cursor: pointer;
+
+	&:hover {
+		background-color: $yellow;
+	}
+}
+
+.heart__svg {
+	display: flex;
+}
